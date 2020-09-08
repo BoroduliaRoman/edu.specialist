@@ -154,6 +154,8 @@ public class Program {
 			
 			c = a >>> 1; // 0111 >> 1 = 0011
 			
+			
+			
 			System.out.println(c);
 		}
 
