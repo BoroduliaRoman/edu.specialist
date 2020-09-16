@@ -57,9 +57,9 @@ public class Program {
 			
 			System.out.println(s1);
 			System.out.println(s2);	
-			if (s1 == s2) {
+			//if (s1 == s2) {
 			
-//			if(s1.equals(s2)) {
+			if(s1.equals(s2)) {
 				System.out.println("True");
 			} else {
 				System.out.println("False");
