@@ -158,6 +158,16 @@ public class Program {
 			
 			System.out.println(c);
 		}
+		
+		int n = 16;
+		
+		for (n = 1; n <= 1024; n++) {
+//			if (((n + 1) & (n - 1)) == 1) {
+//			if ( (n & (n - 1)) == 0) {
+			if ((n & -n) == n) {
+				System.out.println(n);
+			}
+		}
 
-	}
+	}	
 }
