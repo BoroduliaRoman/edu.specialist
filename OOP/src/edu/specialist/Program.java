@@ -37,8 +37,16 @@ public class Program {
 			Point p2 = p1.clone();
 			p1.color = "red";
 			
+			Shape s1 = p1; // implicit conv
+			
+			Point p3 = (Point) s1; // explicit conv (cast)			
+			p3.moveBy(1, 1);
+			
+			
 			Circle c1 = new Circle(100, 200, 50, "pink");
 			c1.scale(1.5);
+			s1 = new Shape();
+			p3 = (Point) s1;
 			
 			Shape.drawScene();
 
