@@ -38,17 +38,38 @@ public class Program {
 			p1.color = "red";
 			
 			Shape s1 = p1; // implicit conv
+			s1.color = "yellow";
 			
-			Point p3 = (Point) s1; // explicit conv (cast)			
-			p3.moveBy(1, 1);
+			p1.draw();
+			s1.draw(); // Point.draw
 			
+			if (s1 instanceof Point) { // true
+				Point p3 = (Point) s1; // explicit conv (cast)			
+				p3.moveBy(1, 1);
+			}			
 			
 			Circle c1 = new Circle(100, 200, 50, "pink");
-			c1.scale(1.5);
-			s1 = new Shape();
-			p3 = (Point) s1;
 			
-			Shape.drawScene();
+//			c1.scale(1.5);		
+			c1.setR(50);
+			System.out.println(c1.getR());
+			s1 = c1;
+			
+			s1.draw(); // Circle.draw
+			
+			/*
+			 * Class	Method	Addr
+			 * Shape	draw	xxx
+			 * Point	draw	yyy
+			 * Circle	draw	zzz			 * 
+			 */
+			
+			
+			if (s1 instanceof Point) { // false
+				Point p3 = (Point) s1;
+			}
+			
+//			Shape.drawScene();
 
 //			p2.draw(); // red
 

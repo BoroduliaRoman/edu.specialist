@@ -1,5 +1,11 @@
 package edu.specialist.graph;
 
+/*
+ * Modifier		Access Level	Visibility
+ * public		public			world
+ * 				package			this package only
+ */
+
 public class Point extends Shape {
 	public int x;
 	public int y;

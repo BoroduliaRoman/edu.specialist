@@ -4,14 +4,22 @@ import java.util.ArrayList;
 
 public class Person {
 	public String name; //= "Unknown";
-	public int age;
-	static ArrayList<Person> persons = new ArrayList<Person>();
+	private int age;
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
 	
 	public static int counter = 0;
 	
 	static {
 		counter = 0;
 	}
+	
+	static ArrayList<Person> persons = new ArrayList<>();
 	
 	public static void showCounter() {
 		System.out.printf("Total persons: %d\n", Person.counter);
