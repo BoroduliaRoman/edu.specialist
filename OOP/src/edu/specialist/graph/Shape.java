@@ -2,7 +2,7 @@ package edu.specialist.graph;
 
 import java.util.ArrayList;
 
-public /*final*/ class Shape {
+public /*final*/ abstract class Shape {
 
 	public static final String DEFAULT_COLOR = "black";
 	/*
@@ -28,7 +28,7 @@ public /*final*/ class Shape {
 	public Shape(String color) {
 		System.out.println("Shape ctor");
 		this.color = color;
-		scene.add(this);
+		scene.add(this); // bad (see Person)
 	}
 
 	public static void drawScene() {
@@ -37,7 +37,8 @@ public /*final*/ class Shape {
 		}
 	}
 
-	public void draw() {
-		System.out.printf("Shape. Color: %s\n", color);
-	}
+	public abstract void draw(); 
+//	{
+//		System.out.printf("Shape. Color: %s\n", color);
+//	}
 }

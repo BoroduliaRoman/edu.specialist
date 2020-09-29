@@ -1,8 +1,24 @@
 package edu.specialist.graph;
 
 public class Circle extends Shape {
-	public int x;
-	public int y;
+	private int x;
+	private int y;
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
 
 	private int r;
 
@@ -22,16 +38,18 @@ public class Circle extends Shape {
 		super(color);
 		this.x = x;
 		this.y = y;
-		this.r = r;
+//		this.r = r;
+		setR(r);
 	}
 
 	public void scale(double factor) {
-		r = (int) (factor * r);
+//		r = (int) (factor * r);
+		setR((int)(factor * getR()));
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Circle (%d, %d) R: %d Color: %s\n", x, y, r, color);
+		return String.format("Circle (%d, %d) R: %d Color: %s\n", x, y, getR(), color);
 	}
 
 	@Override
