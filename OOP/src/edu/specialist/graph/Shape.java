@@ -36,6 +36,23 @@ public /*final*/ abstract class Shape {
 			s.draw();
 		}
 	}
+	
+	public static void scaleScene(double factor) {
+		for (Shape s : scene) {
+			if (s instanceof Scaleable) {
+				Scaleable sc = (Scaleable)s;
+				sc.scale(factor);
+			}
+			
+			/*
+			// bad
+			if (s instanceof Circle) {
+				Circle c = (Circle)s;
+				c.scale(factor);
+			}
+			*/
+		}
+	}
 
 	public abstract void draw(); 
 //	{

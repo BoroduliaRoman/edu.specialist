@@ -50,8 +50,15 @@ public class Program {
 			}
 
 			Circle c1 = new Circle(100, 200, 50, "pink");
-
-			c1.scale(1.5);
+			
+			Scaleable sc1 = c1;
+			sc1.scale(1.5);
+			//Scaleable.DEFAULT_FACTOR
+			System.out.println(Scaleable.DEFAULT_FACTOR);
+			System.out.println(Moveable.DEFAULT_FACTOR);
+//			System.out.println(((Moveable)c1).DEFAULT_FACTOR);
+			
+//			c1.scale(1.5);
 //			c1.setR(50);
 			System.out.println(c1.getR());
 			s1 = c1;

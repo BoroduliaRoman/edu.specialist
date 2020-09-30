@@ -1,6 +1,8 @@
 package edu.specialist.graph;
 
-public class Circle extends Shape {
+import java.io.Serializable;
+
+public class Circle extends Shape implements Scaleable, Serializable/*, Moveable*/ {
 	private int x;
 	private int y;
 
@@ -41,10 +43,18 @@ public class Circle extends Shape {
 //		this.r = r;
 		setR(r);
 	}
-
+	
 	public void scale(double factor) {
 //		r = (int) (factor * r);
 		setR((int)(factor * getR()));
+	}
+	
+//	public void scale() {
+//		scale(DEFAULT_FACTOR);
+//	}
+	
+	public void scale() {
+		((Scaleable)this).scale();
 	}
 
 	@Override
